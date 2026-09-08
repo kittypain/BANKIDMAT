@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KХИМИРА ФИНАНС | MYR ↔ RUB Exchange</title>
-    <meta name="description" content="KХИМИРА ФИНАНС - A joint company of БАНКHiDМАТ x КАССАМИРА. Trusted Malaysian Ringgit to Russian Ruble exchange service.">
+    <meta name="description" content="KХИМИРА ФИНАНС - A joint venture of БАНКHiDМАТ and КАССАМИРА. Trusted Malaysian Ringgit to Russian Ruble exchange service.">
     
     <!-- JetBrains Mono (Nerd Font compatible) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,35 +76,15 @@
             margin: 0 auto;
         }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .logo-main {
+        .logo {
             font-size: 1.4rem;
             font-weight: 800;
             color: var(--accent-cyan);
             text-decoration: none;
             letter-spacing: -0.5px;
-            line-height: 1.2;
         }
 
-        .logo-main .alt {
-            color: var(--accent-magenta);
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            color: var(--text-muted);
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            margin-top: 4px;
-            text-transform: uppercase;
-        }
-
-        .logo-sub .alt {
+        .logo .alt {
             color: var(--accent-magenta);
         }
 
@@ -150,7 +130,7 @@
             padding: 120px 0 100px 0;
             border-bottom: 1px solid var(--border-color);
             overflow: hidden;
-            min-height: 500px;
+            min-height: 550px;
             display: flex;
             align-items: center;
         }
@@ -220,15 +200,13 @@
             color: var(--accent-yellow);
         }
 
-        .hero .joint-venture-text {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
-        }
-
-        .hero .joint-venture-text .alt {
+        .hero-subtitle {
+            font-size: 1rem;
             color: var(--accent-magenta);
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .hero p {
@@ -468,29 +446,15 @@
         }
 
         footer .footer-brand {
-            color: var(--accent-cyan);
-            font-weight: 700;
-        }
-
-        footer .footer-sub {
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            margin-top: 5px;
-            letter-spacing: 1px;
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .logo-container {
-                align-items: center;
-            }
             .hero {
                 padding: 80px 0 60px 0;
-                min-height: 400px;
+                min-height: 450px;
             }
             .hero h1 {
                 font-size: 2rem;
@@ -515,10 +479,7 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <div class="logo-container">
-                <a href="#" class="logo-main">KХИМИРА <span class="alt">ФИНАНС</span></a>
-                <span class="logo-sub">БАН<span class="alt">КHiD</span>МАТ x КАСС<span class="alt">АМИРА</span></span>
-            </div>
+            <a href="#" class="logo">KХИМИРА <span class="alt">ФИНАНС</span></a>
             <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
     </header>
@@ -532,7 +493,7 @@
                 MYR <span class="arrow">⇄</span> RUB
             </div>
             <h1>Penat Pergi <span class="highlight">ATM</span>?</h1>
-            <p class="joint-venture-text">A joint company of БАН<span class="alt">КHiD</span>МАТ x КАСС<span class="alt">АМИРА</span></p>
+            <div class="hero-subtitle">A joint venture of БАНКHiDМАТ × КАССАМИРА</div>
             <p>Come to us and we will change it for you. Skip the queues and the hassle, let us handle it for you securely.</p>
             <a href="https://wa.me/79207165703" target="_blank" class="btn btn-whatsapp">Get Started Today</a>
         </div>
@@ -554,7 +515,7 @@
                     <p>We believe in honest business. We will work together with complete transparency so you always know where you stand.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">️</div>
+                    <div class="feature-icon">🛡️</div>
                     <h3>Safety First</h3>
                     <p>We employ strict safety practices to ensure your transactions are handled with the utmost care and security.</p>
                 </div>
@@ -594,13 +555,13 @@
                         <span class="card-icon"></span>
                         <h4>BLOCKED USERS</h4>
                     </div>
-                    <p>I do not trade with anyone who has previously been blocked by a bank, even if they have been unblocked.</p>
+                    <p>We do not trade with anyone who has previously been blocked by a bank, even if they have been unblocked.</p>
                 </div>
 
                 <!-- Bank Transfer -->
                 <div class="prereq-card">
                     <div class="card-header">
-                        <span class="card-icon"></span>
+                        <span class="card-icon">🏦</span>
                         <h4>BANK TRANSFER</h4>
                     </div>
                     <ul>
@@ -621,10 +582,10 @@
                 <!-- Large Amounts -->
                 <div class="prereq-card large-card">
                     <div class="card-header">
-                        <span class="card-icon">💰</span>
+                        <span class="card-icon"></span>
                         <h4>LARGE AMOUNTS</h4>
                     </div>
-                    <p>Need to exchange an <strong style="color: var(--accent-magenta);">ASTRONOMICAL</strong> sum!!! 💸 No worries! I also provide a separate service for large-value transactions. Just DM me for more details.</p>
+                    <p>Need to exchange an <strong style="color: var(--accent-magenta);">ASTRONOMICAL</strong> sum!!! 💸 No worries! We also provide a separate service for large-value transactions. Just DM us for more details.</p>
                 </div>
 
                 <!-- KYC -->
@@ -647,7 +608,7 @@
 
             </div>
 
-            <p class="notice-footer">Thank you for reading and understanding before proceeding with your transaction. <span class="heart"></span></p>
+            <p class="notice-footer">Thank you for reading and understanding before proceeding with your transaction. <span class="heart">🤍</span></p>
         </div>
     </section>
 
@@ -663,8 +624,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p class="footer-brand">&copy; 2026 KХИМИРА ФИНАНС</p>
-            <p class="footer-sub">A joint company of БАНКHiDМАТ x КАССАМИРА</p>
+            <p>&copy; 2026 <span class="footer-brand">KХИМИРА ФИНАНС</span>. All rights reserved.</p>
+            <p style="margin-top: 5px; font-size: 0.75rem;">A joint company of БАНКHiDМАТ × КАССАМИРА</p>
         </div>
     </footer>
 
