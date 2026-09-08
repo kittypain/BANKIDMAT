@@ -1,2 +1,0 @@
-# BANKIDMAT
-#Thanks for vissiting
