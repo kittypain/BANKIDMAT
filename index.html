@@ -3,28 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Exchange Services | Trusted & Transparent</title>
+    <title>БАНКHiDМАТ | Trusted Cash Exchange</title>
     <meta name="description" content="Tired of going to the ATM? We provide real, trusted rates with complete transparency.">
-    <!-- Google Fonts -->
+    
+    <!-- JetBrains Mono (Nerd Font compatible) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
-        /* --- CSS VARIABLES & RESET --- */
+        /* --- TOKYO NIGHT THEME VARIABLES --- */
         :root {
-            --primary: #0F4C81;
-            --primary-light: #1A65B0;
-            --accent: #FCA311;
-            --bg-light: #F8F9FA;
-            --bg-white: #FFFFFF;
-            --text-dark: #212529;
-            --text-muted: #6C757D;
-            --warning-bg: #FFF3CD;
-            --warning-border: #FFEEBA;
-            --warning-text: #856404;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --bg-night: #1a1b26;
+            --bg-surface: #24283b;
+            --bg-highlight: #1f2335;
+            
+            --text-primary: #c0caf5;
+            --text-muted: #9aa5ce;
+            
+            --accent-blue: #7aa2f7;
+            --accent-cyan: #7dcfff;
+            --accent-magenta: #bb9af7;
+            --accent-green: #9ece6a;
+            --accent-yellow: #e0af68;
+            --accent-red: #f7768e;
+            
+            --border-color: #3b4261;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
         }
 
         * {
@@ -34,10 +40,11 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--bg-light);
+            /* Nerd Font fallback chain */
+            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Nerd Font', monospace;
+            color: var(--text-primary);
+            line-height: 1.7; /* Increased line height for monospace readability */
+            background-color: var(--bg-night);
         }
 
         /* --- LAYOUT --- */
@@ -53,11 +60,12 @@
 
         /* --- HEADER --- */
         header {
-            background: var(--bg-white);
-            box-shadow: var(--shadow);
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
         .nav-container {
@@ -70,197 +78,203 @@
         }
 
         .logo {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 800;
-            color: var(--primary);
+            color: var(--accent-cyan);
             text-decoration: none;
+            letter-spacing: -0.5px;
         }
 
         .logo span {
-            color: var(--accent);
+            color: var(--accent-magenta);
         }
 
         .btn {
             display: inline-block;
             padding: 12px 24px;
-            border-radius: 8px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
+            font-family: inherit;
             transition: all 0.3s ease;
             cursor: pointer;
-            border: none;
-            font-size: 1rem;
+            border: 1px solid transparent;
+            font-size: 0.95rem;
         }
 
         .btn-primary {
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--accent-blue);
+            color: var(--bg-night);
         }
 
         .btn-primary:hover {
-            background-color: var(--primary-light);
+            background-color: var(--accent-cyan);
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 4px 12px rgba(122, 162, 247, 0.3);
         }
 
         .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
+            background-color: var(--accent-green);
+            color: var(--bg-night);
         }
 
         .btn-whatsapp:hover {
-            background-color: #1ebe5d;
+            background-color: #a6da75;
             transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(158, 206, 106, 0.3);
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, #0a3459 100%);
-            color: white;
+            background: linear-gradient(160deg, var(--bg-night) 0%, var(--bg-highlight) 100%);
             text-align: center;
             padding: 100px 0;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
+            color: var(--text-primary);
         }
 
         .hero h1 .highlight {
-            color: var(--accent);
+            color: var(--accent-yellow);
         }
 
         .hero p {
-            font-size: 1.25rem;
-            max-width: 600px;
+            font-size: 1.1rem;
+            max-width: 650px;
             margin: 0 auto 30px auto;
-            opacity: 0.9;
+            color: var(--text-muted);
         }
 
         /* --- FEATURES SECTION --- */
         .features {
-            background: var(--bg-white);
+            background: var(--bg-night);
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             margin-bottom: 50px;
-            color: var(--primary);
+            color: var(--accent-cyan);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .feature-card {
-            background: var(--bg-light);
+            background: var(--bg-surface);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 8px;
             text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-blue);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
         .feature-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             margin-bottom: 10px;
-            color: var(--text-dark);
+            color: var(--accent-magenta);
         }
 
         .feature-card p {
             color: var(--text-muted);
+            font-size: 0.95rem;
         }
 
         /* --- NOTICE / DISCLAIMER SECTION --- */
         .notice-section {
-            background: var(--bg-light);
+            background: var(--bg-highlight);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .notice-box {
-            background: var(--warning-bg);
-            border: 1px solid var(--warning-border);
-            color: var(--warning-text);
+            background: rgba(247, 118, 142, 0.05); /* Subtle dark red tint */
+            border: 1px solid var(--accent-red);
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 8px;
             max-width: 800px;
             margin: 0 auto;
-            box-shadow: var(--shadow);
         }
 
         .notice-box h3 {
             display: flex;
             align-items: center;
             gap: 10px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 15px;
-            color: #664d03;
+            color: var(--accent-red);
         }
 
         .notice-box p {
-            font-size: 1.05rem;
-            line-height: 1.7;
+            font-size: 1rem;
+            color: var(--text-primary);
         }
 
         .notice-box strong {
-            color: #664d03;
+            color: var(--accent-yellow);
         }
 
         /* --- CONTACT / CTA SECTION --- */
         .cta-section {
-            background: var(--bg-white);
+            background: var(--bg-night);
             text-align: center;
         }
 
         .cta-section h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
-            color: var(--text-dark);
+            color: var(--text-primary);
         }
 
         .cta-section p {
             color: var(--text-muted);
             margin-bottom: 30px;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
 
         /* --- FOOTER --- */
         footer {
-            background: #212529;
-            color: #adb5bd;
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
             text-align: center;
             padding: 30px 0;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.2rem;
+                font-size: 2rem;
             }
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             section {
                 padding: 60px 0;
             }
             .section-title {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -270,7 +284,7 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">Cash<span>Exchange</span></a>
+            <a href="#" class="logo">БАНК<span>HiDМАТ</span></a>
             <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
     </header>
@@ -280,14 +294,14 @@
         <div class="container">
             <h1>Penat Pergi <span class="highlight">ATM</span>?</h1>
             <p>Come to us and we will change it for you. Skip the queues and the hassle, let us handle it for you securely.</p>
-            <a href="#contact" class="btn btn-whatsapp">Get Started Today</a>
+            <a href="https://wa.me/79207165703" target="_blank" class="btn btn-whatsapp">Get Started Today</a>
         </div>
     </section>
 
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Why Choose Us?</h2>
+            <h2 class="section-title">// Why Choose Us?</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">💯</div>
@@ -311,7 +325,7 @@
     <!-- Notice / Prerequisite Section -->
     <section class="notice-section">
         <div class="container">
-            <h2 class="section-title">Important Prerequisite</h2>
+            <h2 class="section-title">// Important Prerequisite</h2>
             <div class="notice-box">
                 <h3>⚠️ Please Read Before Proceeding</h3>
                 <p>
@@ -326,15 +340,14 @@
         <div class="container">
             <h2>Ready to make a transaction?</h2>
             <p>Reach out to us today. We are ready to assist you.</p>
-            <!-- Replace the '#' below with your actual WhatsApp link (e.g., https://wa.me/60123456789) -->
-            <a href="#" class="btn btn-whatsapp">Chat on WhatsApp</a>
+            <a href="https://wa.me/79207165703" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Your Business Name. All rights reserved.</p>
+            <p>&copy; 2026 БАНКHiDМАТ. All rights reserved.</p>
         </div>
     </footer>
 
