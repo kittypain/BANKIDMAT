@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>БАНКHiDМАТЬ | MYR ↔ RUB Exchange</title>
-    <meta name="description" content="Trusted Malaysian Ringgit to Russian Ruble exchange service. Real rates, complete transparency.">
+    <title>KХИМИРА ФИНАНС | MYR ↔ RUB Exchange</title>
+    <meta name="description" content="KХИМИРА ФИНАНС - A joint company of БАНКHiDМАТ x КАССАМИРА. Trusted Malaysian Ringgit to Russian Ruble exchange service.">
     
     <!-- JetBrains Mono (Nerd Font compatible) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -76,15 +76,35 @@
             margin: 0 auto;
         }
 
-        .logo {
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-main {
             font-size: 1.4rem;
             font-weight: 800;
             color: var(--accent-cyan);
             text-decoration: none;
             letter-spacing: -0.5px;
+            line-height: 1.2;
         }
 
-        .logo .alt {
+        .logo-main .alt {
+            color: var(--accent-magenta);
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            margin-top: 4px;
+            text-transform: uppercase;
+        }
+
+        .logo-sub .alt {
             color: var(--accent-magenta);
         }
 
@@ -191,13 +211,24 @@
         .hero h1 {
             font-size: 2.8rem;
             font-weight: 800;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
             color: var(--text-primary);
         }
 
         .hero h1 .highlight {
             color: var(--accent-yellow);
+        }
+
+        .hero .joint-venture-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero .joint-venture-text .alt {
+            color: var(--accent-magenta);
         }
 
         .hero p {
@@ -271,7 +302,6 @@
             font-size: 1rem;
         }
 
-        /* Main warning box */
         .warning-box {
             background: rgba(247, 118, 142, 0.08);
             border: 1px solid var(--accent-red);
@@ -299,7 +329,6 @@
             color: var(--accent-yellow);
         }
 
-        /* Prerequisite cards grid */
         .prereq-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -358,7 +387,7 @@
         }
 
         .prereq-card ul li::before {
-            content: '';
+            content: '▸';
             position: absolute;
             left: 0;
             color: var(--accent-magenta);
@@ -369,7 +398,6 @@
             color: var(--text-primary);
         }
 
-        /* Tip card - special styling */
         .prereq-card.tip-card {
             border-color: var(--accent-yellow);
             background: rgba(224, 175, 104, 0.05);
@@ -379,7 +407,6 @@
             color: var(--accent-yellow);
         }
 
-        /* Large amount card - special styling */
         .prereq-card.large-card {
             border-color: var(--accent-magenta);
             background: rgba(187, 154, 247, 0.05);
@@ -389,7 +416,6 @@
             color: var(--accent-magenta);
         }
 
-        /* Minimum card */
         .prereq-card.min-card {
             border-color: var(--accent-green);
             background: rgba(158, 206, 106, 0.05);
@@ -441,8 +467,27 @@
             font-size: 0.85rem;
         }
 
+        footer .footer-brand {
+            color: var(--accent-cyan);
+            font-weight: 700;
+        }
+
+        footer .footer-sub {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
         /* --- RESPONSIVE --- */
         @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .logo-container {
+                align-items: center;
+            }
             .hero {
                 padding: 80px 0 60px 0;
                 min-height: 400px;
@@ -470,7 +515,10 @@
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">БАН<span class="alt">КHiD</span>МАТЬ</a>
+            <div class="logo-container">
+                <a href="#" class="logo-main">KХИМИРА <span class="alt">ФИНАНС</span></a>
+                <span class="logo-sub">БАН<span class="alt">КHiD</span>МАТ x КАСС<span class="alt">АМИРА</span></span>
+            </div>
             <a href="#contact" class="btn btn-primary">Contact Us</a>
         </div>
     </header>
@@ -484,6 +532,7 @@
                 MYR <span class="arrow">⇄</span> RUB
             </div>
             <h1>Penat Pergi <span class="highlight">ATM</span>?</h1>
+            <p class="joint-venture-text">A joint company of БАН<span class="alt">КHiD</span>МАТ x КАСС<span class="alt">АМИРА</span></p>
             <p>Come to us and we will change it for you. Skip the queues and the hassle, let us handle it for you securely.</p>
             <a href="https://wa.me/79207165703" target="_blank" class="btn btn-whatsapp">Get Started Today</a>
         </div>
@@ -505,7 +554,7 @@
                     <p>We believe in honest business. We will work together with complete transparency so you always know where you stand.</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-icon">️</div>
                     <h3>Safety First</h3>
                     <p>We employ strict safety practices to ensure your transactions are handled with the utmost care and security.</p>
                 </div>
@@ -516,7 +565,7 @@
     <!-- Notice / Prerequisite Section -->
     <section class="notice-section">
         <div class="container">
-            <h2 class="section-title">//  PLEASE READ BEFORE PROCEEDING</h2>
+            <h2 class="section-title">// PLEASE READ BEFORE PROCEEDING</h2>
             <p class="notice-intro">Before making any transaction, please take note of the following important information.</p>
 
             <!-- Main Warning -->
@@ -542,7 +591,7 @@
                 <!-- Blocked Users -->
                 <div class="prereq-card">
                     <div class="card-header">
-                        <span class="card-icon">🚫</span>
+                        <span class="card-icon"></span>
                         <h4>BLOCKED USERS</h4>
                     </div>
                     <p>I do not trade with anyone who has previously been blocked by a bank, even if they have been unblocked.</p>
@@ -551,7 +600,7 @@
                 <!-- Bank Transfer -->
                 <div class="prereq-card">
                     <div class="card-header">
-                        <span class="card-icon">🏦</span>
+                        <span class="card-icon"></span>
                         <h4>BANK TRANSFER</h4>
                     </div>
                     <ul>
@@ -598,7 +647,7 @@
 
             </div>
 
-            <p class="notice-footer">Thank you for reading and understanding before proceeding with your transaction. <span class="heart">🤍</span></p>
+            <p class="notice-footer">Thank you for reading and understanding before proceeding with your transaction. <span class="heart"></span></p>
         </div>
     </section>
 
@@ -614,7 +663,8 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 БАНКHiDМАТЬ. All rights reserved.</p>
+            <p class="footer-brand">&copy; 2026 KХИМИРА ФИНАНС</p>
+            <p class="footer-sub">A joint company of БАНКHiDМАТ x КАССАМИРА</p>
         </div>
     </footer>
 
